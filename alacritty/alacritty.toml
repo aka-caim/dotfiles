@@ -1,0 +1,17 @@
+general.import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[window]
+padding = { x = 10, y = 9 }
+dynamic_padding = true
+opacity = 0.5
+
+[selection]
+save_to_clipboard = true
+
+[font]
+size = 12
+normal = { family = "unifont", style = "Regular" }
+bold = { family = "unifont", style = "Regular" }
+italic = { family = "unifont", style = "Regular" }

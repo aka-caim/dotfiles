@@ -1,0 +1,26 @@
+@import "mocha.css";
+
+* {
+  color: @text;
+  font-family: "Unifont";
+  font-size: 12pt;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+#workspaces {
+  padding: 1px;
+  margin: 0px;
+}
+
+#workspaces button {
+  padding: 0 3px;
+  margin: 0 2px;
+  min-width: 0px;
+  min-height: 0px;
+
+  border-radius: 0px;
+}
+

@@ -1,0 +1,35 @@
+{
+  "position": "bottom", // Waybar at top layer
+  //"height": 20, // Waybar height (to be removed for auto height)
+  "modules-left": ["hyprland/workspaces", "custom/playerctl"],
+  "modules-right": ["custom/pacup", "custom/weather", "battery", "clock"],
+  
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "format": "BAT {capacity}%"
+  },
+
+  "custom/weather": {
+    "exec": "curl 'https://wttr.in/sao-paulo?format=1' | awk -F+ '{print $2}'",
+    "interval": 5,
+    "format": "{}",
+    "tooltip": true
+  },
+
+  "custom/pacup": {
+    "exec": "if [ $(checkupdates | wc -l) -gt 0 ]; then echo ⟳$(checkupdates | wc -l); fi",
+    "interval": 60
+  },
+
+  "custom/playerctl": {
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/playerctl.sh"
+  }
+}
